@@ -36,4 +36,4 @@ This repo should contain the following files:
 
 ## Running the notebooks
 
-Experiment times reported in the notebooks were achieved on a 2018 Macbook Pro. If you find any bugs or have questions, please contact `csho@stanford.edu`
+Experiments reported in the notebooks were achieved using a Laptop with Windows 11, Intel i7-10875H CPU (2.30GHz) and 32 GB RAM. If you find any bugs or have questions, please contact `jiaheng.cui@uga.edu` or `zhao-nano-lab@uga.edu`.
