@@ -1,8 +1,8 @@
 # OP-airPLS
 
-This repository is for OP-airPLS, an adaptive grid search optimization algorithm to find best parameters for the airPLS baseline removal.
+This repository is for OP-airPLS, an adaptive grid search optimization algorithm to find the best parameters for the airPLS baseline removal, and its proceeding steps of using a PCA-RF model to predict the best parameters for the airPLS algorithm directly.
 
-It contains sample data used in the experiments, and demonstrations of using Jupyter notebooks files to run the optimization algorithm. 
+It contains sample data used in the experiments, demonstrations of using Jupyter notebook files to run the optimization algorithm, and a Jupyter notebook file to do the prediction given the trained model. 
 
 ## Requirements
 
