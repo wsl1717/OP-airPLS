@@ -43,4 +43,8 @@ The sample data for the machine learning prediction can be found and downloaded 
 
 When running both notebooks, please make sure to replace the sample paths to the data paths on your PC!
 
-Experiments reported in the notebooks were achieved using 1) a laptop with Windows 11, Intel i7-10875H CPU (2.30GHz) and 32 GB RAM; and 2) a desktop with Windows 11, Intel i7-13700KF CPU (3.40GHz) and 64 GB RAM. If you find any bugs or have questions, please contact `jiaheng.cui@uga.edu` or `zhao-nano-lab@uga.edu`.
+Experiments reported in the notebooks were achieved using 1) a laptop with Windows 11, Intel i7-10875H CPU (2.30GHz) and 32 GB RAM; and 2) a desktop with Windows 11, Intel i7-13700KF CPU (3.40GHz) and 64 GB RAM.
+
+## Contact
+
+If you find any bugs or have questions, please contact `jiaheng.cui@uga.edu` or `zhao-nano-lab@uga.edu`, or leave a message in Github Issues or Discussions! We would be happy to contact you or for future collaboration!
