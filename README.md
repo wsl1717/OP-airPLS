@@ -6,7 +6,14 @@ This repository is for OP-airPLS, an adaptive grid search optimization algorithm
 
 It contains sample data used in the experiments, demonstrations of using Jupyter notebook files to run the optimization algorithm, and a Jupyter notebook file to do the prediction given the trained model. 
 
-The main procedure is as follows:
+## Procedure
+
+The overall procedure is as follows:
+
+1. Generate spectra along with true baselines for simulation,
+2. Feed the (spectrum with baseline, true baseline) pairs into the iterative optimization algorithm, get the optimal parameters $`(\lambda^*, \tau^*)`$ for each spectrum.
+3. Treat the (spectrum, $`(\lambda^*, \tau^*)`$) pairs as a dataset, split the dataset into training/validation/test set, and train the PCA-RF model.
+4. Compare the predicted baseline by PCA-RF model with true baseline.
 
 ![TOC](/images/OP-airPLS-Table-of-Content.png)
 
