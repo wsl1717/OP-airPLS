@@ -6,8 +6,7 @@ This repository is for OP-airPLS, an adaptive grid search optimization algorithm
 
 It contains sample data used in the experiments, demonstrations of using Jupyter notebook files to run the optimization algorithm, and a Jupyter notebook file to do the prediction given the trained model. 
 
-<!-- ![TOC](./OP-airPLS Table of Content.png "Optional Title") -->
-![PDMD](./images/OP-airPLS Table of Content.png)
+![TOC](/images/OP-airPLS-Table-of-Content.png)
 
 ## Requirements
 
