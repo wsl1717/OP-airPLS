@@ -35,7 +35,9 @@ We recommend using the Anaconda Python distribution, which is available for Wind
 
 ## Data
 
-The sample data for the experiments can be found and downloaded in the `data` subdirectory.
+The sample data for the iterative optimization experiments can be found and downloaded in the `1. Optimization Part/data` subdirectory.
+
+The sample data for the machine learning prediction can be found and downloaded in `2. ML Part/B&E_sample_spectra.csv`. The model also accepts other csv files containing data in the same format.
 
 ## Running the notebooks
 
