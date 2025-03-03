@@ -2,49 +2,74 @@
 
 ## Overview
 
-This repository is for OP-airPLS, an adaptive grid search optimization algorithm to find the best parameters for the airPLS baseline removal, and its proceeding steps of using a PCA-RF model to predict the best parameters for the airPLS algorithm directly.
+OP-airPLS is an adaptive grid search optimization algorithm designed to find the best parameters for the airPLS baseline removal method. It also includes a PCA-RF machine learning model to predict optimal airPLS parameters directly from input spectra.
 
-It contains sample data used in the experiments, demonstrations of using Jupyter notebook files to run the optimization algorithm, and a Jupyter notebook file to do the prediction given the trained model. 
+This repository provides:
+- Sample data used in the experiments.
+- Jupyter notebooks demonstrating the optimization algorithm.
+- A Jupyter notebook for making predictions using the trained PCA-RF model.
 
 ## Procedure
 
-The overall procedure is as follows:
+The overall workflow consists of the following steps:
 
-1. Generate spectra along with true baselines for simulation,
-2. Feed the (spectrum with baseline, true baseline) pairs into the iterative optimization algorithm, get the optimal parameters $`(\lambda^*, \tau^*)`$ for each spectrum.
-3. Treat the (spectrum, $`(\lambda^*, \tau^*)`$) pairs as a dataset, split the dataset into training/validation/test set, and train the PCA-RF model.
-4. Compare the predicted baseline by PCA-RF model with true baseline.
+1. **Simulating Spectra**: Generate synthetic spectra along with their true baselines.
+2. **Optimizing Parameters**: Use the iterative optimization algorithm to determine the optimal airPLS parameters, $`(\lambda^*, \tau^*)`$, for each spectrum.
+3. **Training the Machine Learning Model**: 
+   - Use optimized parameter pairs to create a dataset.
+   - Split the dataset into training, validation, and test sets.
+   - Train a **PCA-RF** model to learn the relationship between spectra and optimal airPLS parameters.
+4. **Evaluating Predictions**: Compare the predicted baseline (from PCA-RF) with the true baseline.
 
 ![TOC](/images/OP-airPLS-Table-of-Content.png)
 
-Specifically, the iterative optimization algorithm can be illustrated using the flowchart as below:
+The iterative optimization algorithm follows the workflow illustrated below:
 
 ![flowchart](/images/OP-airPLS-flowchart.png)
 
 ## Requirements
 
-The code in this repo has been tested with the following software versions:
+The code has been tested with the following software versions:
+
 - Python 3.11.5
-- Numpy 1.24.3
+- NumPy 1.24.3
 - Pandas 2.2.1
 - Matplotlib 3.8.4
-- Scipy 1.11.1
+- SciPy 1.11.1
 - Scikit-Learn 1.4.1
 
-We recommend using the Anaconda Python distribution, which is available for Windows, MacOS, and Linux. Installation for all required packages (listed above) has been tested using the standard instructions from the providers of each package. 
+We recommend using the **Anaconda** Python distribution, which supports Windows, macOS, and Linux. To install the required packages, you can use:
 
 ## Data
 
-The sample data for the iterative optimization experiments can be found and downloaded in the `1. Optimization Part/data` subdirectory.
+Sample datasets are available in the following subdirectories:
 
-The sample data for the machine learning prediction can be found and downloaded in `2. ML Part/B&E_sample_spectra.csv`. The model also accepts other csv files containing data in the same format.
+- **Optimization data**: [`1. Optimization Part/data/`](./1.%20Optimization%20Part/data/)
+- **Machine learning prediction data**: [`2. ML Part/B&E_sample_spectra.csv`](./2.%20ML%20Part/B&E_sample_spectra.csv)
 
-## Running the notebooks
+The PCA-RF model also accepts other `.csv` files with the same format.
 
-When running both notebooks, please make sure to replace the sample paths to the data paths on your PC!
+## Running the Notebooks
 
-Experiments reported in the notebooks were achieved using 1) a laptop with Windows 11, Intel i7-10875H CPU (2.30GHz) and 32 GB RAM; and 2) a desktop with Windows 11, Intel i7-13700KF CPU (3.40GHz) and 64 GB RAM.
+Before running the Jupyter notebooks, ensure that file paths in the scripts match the location of your dataset on your local machine.
+
+### **System Requirements**
+The experiments in this repository were conducted on the following systems:
+
+- **Laptop**: Windows 11, Intel i7-10875H (2.30GHz), 32GB RAM  
+- **Desktop**: Windows 11, Intel i7-13700KF (3.40GHz), 64GB RAM  
+
+Performance may vary depending on hardware specifications.
 
 ## Contact
 
-If you find any bugs or have questions, please contact `jiaheng.cui@uga.edu` or `zhao-nano-lab@uga.edu`, or leave a message in Github Issues or Discussions! We would be happy to contact you or for future collaboration!
+For any questions, issues, or collaboration opportunities, please reach out via:
+
+📧 **Email**:  
+- [jiaheng.cui@uga.edu](mailto:jiaheng.cui@uga.edu)  
+- [zhao-nano-lab@uga.edu](mailto:zhao-nano-lab@uga.edu)  
+
+💬 **GitHub**:  
+- Open an **Issue** or start a discussion in **GitHub Discussions**.
+
+We welcome feedback and potential collaborations!
