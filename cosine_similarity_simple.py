@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # 示例1: 使用工作空间中的数据文件
     try:
         # 读取一个示例文件查看结构
-        sample_file = r"e:\Desktop\OP-airPLS\2. ML Part\results\0\0_results.csv"
+        sample_file = r"e:\Desktop\OP-airPLS\3. data\模拟数据.csv"
         df_sample = pd.read_csv(sample_file)
         
         print("示例文件结构:")
