@@ -47,14 +47,18 @@ def read_simple_sorted(file_path,wave_start = 0,wave_end = 5000):#file_name是�
 
 
 file_path1 = r'e:\Desktop\扣背景finetune\data\2\bc'
-file_path2 = r'e:\Desktop\OP-airPLS\3. data\模拟数据.csv'
+file_path2 = r'e:\Desktop\OP-airPLS\3. data\余弦相似度计算.csv'
 
-wavenumber, intensity, name = read_simple_sorted(file_path1)
-x = intensity[0]
-f = interp1d(wavenumber[0], intensity[0], kind='linear')
-keys_new=np.linspace(min(wavenumber[0]),max(wavenumber[0]),2500)
-spectrum_new=f(keys_new)
+# wavenumber, intensity, name = read_simple_sorted(file_path1)
+# x = intensity[0]
+# f = interp1d(wavenumber[0], intensity[0], kind='linear')
+# keys_new=np.linspace(min(wavenumber[0]),max(wavenumber[0]),2500)
+# spectrum_new=f(keys_new)
 df = pd.read_csv(file_path2)
-y = df['1'].values
-similarity = cosine_similarity(spectrum_new.reshape(1, -1), y.reshape(1, -1))[0, 0]
+y1 = df['1'].values
+y2 = df['Y'].values
+# f = interp1d(wavenumber[0], intensity[0], kind='linear')
+# keys_new=np.linspace(min(wavenumber[0]),max(wavenumber[0]),2500)
+# spectrum_new=f(keys_new)
+similarity = cosine_similarity(y1.reshape(1, -1), y2.reshape(1, -1))[0, 0]
 print(f'Cosine Similarity: {similarity}')
