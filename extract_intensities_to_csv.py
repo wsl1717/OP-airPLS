@@ -125,8 +125,8 @@ def main():
     """Main function to run the extraction."""
     
     # Define paths
-    txt_folder_path = r"e:\Desktop\OP-airPLS\ULF 原始数据"
-    output_csv_path = r"E:\Desktop\OP-airPLS\3. data\ULF 原始数据.csv"
+    txt_folder_path = r"e:\Desktop\OP-airPLS\3. data\bc_cons"
+    output_csv_path = r"E:\Desktop\OP-airPLS\3. data\ULF bc_cons.csv"
     
     print("=== Extracting Intensities from TXT Files to CSV ===")
     print(f"Input folder: {txt_folder_path}")
